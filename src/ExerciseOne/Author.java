@@ -2,9 +2,19 @@ package ExerciseOne;
 
 public class Author {
 
-    String name;
-    String surname;
-    char category;
+    private String name;
+    private String surname;
+    private String email;
+    private char genre;
+
+    public Author(String name, String surname, String email, char genre) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.genre = genre;
+    }
+
+    // region getters and setters
 
     public String getName() {
         return name;
@@ -22,13 +32,30 @@ public class Author {
         this.surname = surname;
     }
 
-    public char getCategory() {
-        return category;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCategory(char category) {
-        this.category = category;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
+    public char getGenre() {
+        return genre;
+    }
+
+    public void setGenre(char genre) {
+        this.genre = genre;
+    }
+
+    //endregion
+
+    @Override
+    public String toString() {
+        return "Author: " +
+                 name + ' ' + surname +
+                ", email:'" + email + '\'' +
+                ", genre:" + genre;
+    }
 
 }
