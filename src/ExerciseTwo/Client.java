@@ -14,14 +14,15 @@ public class Client {
         this.email = email;
         this.discountPer = discountPer;
     }
-
+    //region getters and setters
     public float getDiscountPer() {
         return this.discountPer;
     }
+    //endregion
 
     @Override
     public String toString() {
-        return "Cliente: { " +
+        return "Cliente { " +
                 "\n\tid: " + this.id +
                 "\n\tnombre: " + this.name +
                 "\n\temail: " + this.email +
